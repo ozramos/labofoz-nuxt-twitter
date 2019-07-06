@@ -1,19 +1,18 @@
 <template lang="pug">
-  img.VueToNuxtLogo(src='/favicon.png')
+  img(src='/favicon.png')
 </template>
 
-<style lang="stylus">
-.VueToNuxtLogo
+<style scoped lang="stylus">
+img
+  position absolute
   display inline-block
-  animation turn 1s ease
-  transform rotateY(0deg)
   position relative
   overflow hidden
-  height 240px
-  width 240px
+  animation turn 1s ease-in-out
 
 @keyframes turn
   0%
+    transform rotateY(0deg)
     width 0
     height 0
 

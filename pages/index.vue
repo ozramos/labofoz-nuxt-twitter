@@ -1,12 +1,39 @@
 <template lang="pug">
-  .container
-    div
+  #hero
+    .text-center
+      h1
+        small
+          small the
+        |  Lab of Oz
+      p Hey 👋 I'm Oz and I love the future, <strong>computer vision</strong>, and <strong>machine learning</strong>!
+      br
       logo
-      h1.title labofoz
-      h2.subtitle Oz Ramos&#39; portfolio
-      .links
-        a(href='https://nuxtjs.org/' target='_blank' class='button--green') Documentation
-        a(href='https://github.com/nuxt/nuxt.js' target='_blank' class='button--grey') GitHub
+
+    ul
+      li
+        a
+          | Handsfree.js
+          br
+          span Drop-in library for crafting handsfree interfaces
+      li
+        a 
+          | School of AI
+          br
+          span Awarded Fellowship in 2018
+      li
+        a
+          | Nonprofiters
+          br
+          span Resource guide for public services and assistance programs
+      li
+        a
+          | STUDIO Residency
+          br
+          span Residency at the Studio for Creative Inquiry at Carnegie Mellon
+      li
+        a LinkShow
+      li
+        a More...
 </template>
 
 <script>
@@ -20,29 +47,45 @@ export default {
 </script>
 
 <style lang="stylus">
-.container
-  margin 0 auto
-  min-height 100vh
-  display flex
-  justify-content center
-  align-items center
-  text-align center
+#hero
+  width 300px
+  margin auto
+  position relative
 
-.title
-  font-family 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
-  display block
-  font-weight 300
-  font-size 100px
-  color #35495e
-  letter-spacing 1px
+  ul
+    position absolute
+    margin 0
+    padding 0
+    left -175px
+    top 120px
+    list-style none
+    text-align left
+    width 650px
 
-.subtitle
-  font-weight 300
-  font-size 42px
-  color #526488
-  word-spacing 5px
-  padding-bottom 15px
+    li
+      display inline-block
+      width 50%
+      float left
+      height 100px
 
-.links
-  padding-top 15px
+      &:nth-child(odd)
+        a
+          padding-right 110px
+          padding-left 0
+      &:nth-child(even)
+        text-align right
+        a
+          padding-left 110px
+          padding-right 0
+
+      p
+        margin 0
+
+      a
+        display inline-block
+        font-weight 900
+        padding 20px
+
+        span
+          font-weight 400
 </style>
