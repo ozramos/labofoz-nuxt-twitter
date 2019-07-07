@@ -17,6 +17,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'}
+    ],
+    script: [
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js'}
     ]
   },
   /*
@@ -30,13 +33,18 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/vue-masonry', ssr: false }
+  ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+
+    // @See: https://github.com/rigor789/vue-scrollto
+    'vue-scrollto/nuxt'
   ],
   /*
    ** Axios module configuration

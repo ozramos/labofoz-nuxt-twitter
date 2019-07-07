@@ -10,7 +10,10 @@
 
     ul
       li(v-for='link in links')
-        a(:href='link.href')
+        a(v-if='link.tweetTag' @click='setTag(link.tweetTag)')
+          | {{link.title}}
+          span {{link.subtitle}}
+        a(v-if='link.href' :href='link.href')
           | {{link.title}}
           span {{link.subtitle}}
 </template>
@@ -28,33 +31,45 @@ export default {
         {
           title: '👀 Handsfree.js',
           subtitle: 'Drop-in library for crafting handsfree interfaces',
-          href: 'https://handsfree-js.firebaseapp.com'
+          tweetTag: 'Handsfree.js'
+          // href: 'https://handsfree-js.firebaseapp.com'
         },
         {
           title: '🎓 2018 School of AI Fellowship',
           subtitle: 'Awarded to research handsfree interfaces on low end devices',
-          href: 'https://www.theschool.ai/school-of-ai-fellowship/'
+          tweetTag: 'School of AI'
+          // href: 'https://www.theschool.ai/school-of-ai-fellowship/'
         },
         {
           title: '🎮 BrowseHandsfree',
           subtitle: 'Collection of handsfree demos, including games and robots',
-          href: 'https://glitch.com/@browsehandsfree'
+          tweetTag: 'BrowseHandsfree'
+          // href: 'https://glitch.com/@browsehandsfree'
         },
         {
           title: '🎨 Residency at CMU',
           subtitle: 'Two weeks at the Frank-Ratchye STUDIO for Creative Inquiry',
-          href: 'https://www.flickr.com/photos/creativeinquiry/albums/72157703188612302'
+          tweetTag: 'Residency at CMU'
+          // href: 'https://www.flickr.com/photos/creativeinquiry/albums/72157703188612302'
         },
         {
-          title: '📜 C.V.',
-          subtitle: 'See if I\'m a good match for your next project',
-          href: 'https://docs.google.com/document/d/1E0B9ZoNRSM3VrQIB9BqDRXOaTXYHdzxHYhn7bR415NI/edit?usp=sharing'
+          title: '🤖 Robots',
+          subtitle: 'Work I\'ve done involving robots or robot sims',
+          tweetTag: 'Robots'
+          // href: 'https://docs.google.com/document/d/1E0B9ZoNRSM3VrQIB9BqDRXOaTXYHdzxHYhn7bR415NI/edit?usp=sharing'
         },
         {
-          title: '📚 My Blog',
-          subtitle: 'Read through out my (almost) daily posts'
+          title: '🧙‍♂️ Follow me on Twitter',
+          subtitle: 'Check out what else I\'m interested in and working on',
+          href: 'https://twitter.com/labofoz'
         }
       ]
+    }
+  },
+
+  methods: {
+    setTag(tag) {
+      this.$store.commit('setTag', tag)
     }
   }
 }

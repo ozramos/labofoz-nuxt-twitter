@@ -1,17 +1,22 @@
 <template lang="pug">
-.container
-  Hero
-  .coming-soon
-    p More coming soon (last update: 7/6)
-  //- form
-  //-   input(type='text' placeholder='Join my monthly newsletter to get a list of things that inspired me 🧙‍♂️')
-  //-   input(type='submit')
+div
+  //- Above the Fold
+  .container
+    Hero
+    form
+      input(type='text' placeholder='Join my monthly newsletter to get a list of things that inspired me 🧙‍♂️')
+      input(type='submit')
+
+  //- Below the fold
+  Tweets
 </template>
 
 <script>
 import Hero from '~/components/Hero'
+import Tweets from '~/components/Tweets'
+
 export default {
-  components: {Hero}
+  components: {Hero, Tweets}
 }
 </script>
 
@@ -20,6 +25,7 @@ export default {
 
 form
   margin $padding 0
+  margin-bottom $paddingLg
   position relative
 
 input
