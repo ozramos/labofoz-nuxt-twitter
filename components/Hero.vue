@@ -94,6 +94,7 @@ export default {
     width $contentWidth
     margin auto
     margin-top $padding
+    max-width 100%
 
     li
       display inline-block
@@ -127,4 +128,17 @@ export default {
         &:hover
           span
             color $colorLink
+
+@media screen and (max-width: 800px)
+  #hero ul
+    li a
+      padding $padding !important
+      text-align left
+
+@media screen and (max-width: 600px)
+  #hero ul
+    li
+      width 100%
+      height auto
+      text-align left !important
 </style>

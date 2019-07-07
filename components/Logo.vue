@@ -29,6 +29,10 @@ $logoSize = 240px
   transform-style preserve-3d
   transform perspective(1000px)
 
+  @media screen and (max-width: 800px)
+    position relative
+    top 0
+
   img
     display inline-block
     position absolute
