@@ -10,7 +10,7 @@
 
     ul
       li(v-for='link in links')
-        a
+        a(:href='link.href')
           | {{link.title}}
           span {{link.subtitle}}
 </template>
@@ -27,23 +27,28 @@ export default {
       links: [
         {
           title: '👀 Handsfree.js',
-          subtitle: 'Drop-in library for crafting handsfree interfaces'
+          subtitle: 'Drop-in library for crafting handsfree interfaces',
+          href: 'https://handsfree-js.firebaseapp.com'
         },
         {
           title: '🎓 2018 School of AI Fellowship',
-          subtitle: 'Awarded to research handsfree interfaces on low end devices'
+          subtitle: 'Awarded to research handsfree interfaces on low end devices',
+          href: 'https://www.theschool.ai/school-of-ai-fellowship/'
         },
         {
           title: '🎮 BrowseHandsfree',
-          subtitle: 'Collection of handsfree demos, including games and robots'
+          subtitle: 'Collection of handsfree demos, including games and robots',
+          href: 'https://glitch.com/@browsehandsfree'
         },
         {
           title: '🎨 Residency at CMU',
-          subtitle: 'Two weeks at the Frank-Ratchye STUDIO for Creative Inquiry'
+          subtitle: 'Two weeks at the Frank-Ratchye STUDIO for Creative Inquiry',
+          href: 'https://www.flickr.com/photos/creativeinquiry/albums/72157703188612302'
         },
         {
           title: '📜 C.V.',
-          subtitle: 'See if I\'m a good match for your next project'
+          subtitle: 'See if I\'m a good match for your next project',
+          href: 'https://docs.google.com/document/d/1E0B9ZoNRSM3VrQIB9BqDRXOaTXYHdzxHYhn7bR415NI/edit?usp=sharing'
         },
         {
           title: '📚 My Blog',
