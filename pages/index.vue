@@ -1,9 +1,11 @@
 <template lang="pug">
 .container
   Hero
-  form
-    input(type='text' placeholder='Join my monthly newsletter to get a list of things that inspired me 🧙‍♂️')
-    input(type='submit')
+  .coming-soon
+    p More coming soon (last update: 7/6)
+  //- form
+  //-   input(type='text' placeholder='Join my monthly newsletter to get a list of things that inspired me 🧙‍♂️')
+  //-   input(type='submit')
 </template>
 
 <script>
@@ -40,4 +42,10 @@ input
     background $colorLink
     color #fff
     border-color $colorLink
+
+.coming-soon
+  font-weight 900
+  color #fff
+  padding $padding
+  background linear-gradient(90deg, rgba(254,200,6,1) 0%, rgba(244,124,32,1) 24%, rgba(244,25,44,1) 50%, rgba(214,9,133,1) 63%, rgba(132,42,130,1) 80%, rgba(50,46,130,1) 100%)
 </style>

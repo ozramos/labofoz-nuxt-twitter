@@ -20,3 +20,20 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## Deploying to Firebase
+
+```bash
+# Install Firebase tools
+npm install -g firebase-tools
+
+# Login to Firebase
+firebase login
+
+# Initialize Firebase, with `dist` as the public directory
+firebase init
+
+# Deploy to firebase
+yarn build
+firebase deploy
+```
