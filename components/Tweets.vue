@@ -21,7 +21,7 @@ export default {
 
   watch: {
     tweetTag (val) {
-      VueScrollTo.scrollTo(this.$refs.tweetsAnchor, 1000)
+      VueScrollTo.scrollTo(this.$refs.tweetsAnchor, 1500)
     }
   },
 

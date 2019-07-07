@@ -59,9 +59,9 @@ export default {
           // href: 'https://docs.google.com/document/d/1E0B9ZoNRSM3VrQIB9BqDRXOaTXYHdzxHYhn7bR415NI/edit?usp=sharing'
         },
         {
-          title: '🧙‍♂️ Follow me on Twitter',
-          subtitle: 'Check out what else I\'m interested in and working on',
-          href: 'https://twitter.com/labofoz'
+          title: '🧙‍♂️ Misc',
+          subtitle: 'Check out what else I\'ve been working on',
+          tweetTag: 'Misc'
         }
       ]
     }
