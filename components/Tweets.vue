@@ -59,4 +59,10 @@ export default {
   width 33%
   float left
   padding $paddingSm
+
+  @media screen and (max-width: 900px)
+    width 50%
+  @media screen and (max-width: 600px)
+    width 100%
+  
 </style>

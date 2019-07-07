@@ -10,9 +10,6 @@ div
         small ps I'm still working on this site 😅
       p
         small <a href="https://twitter.com/labofoz">Twitter @labofoz</a>
-    //- form
-    //-   input(type='text' placeholder='Join my monthly newsletter to get a list of things that inspired me 🧙‍♂️')
-    //-   input(type='submit')
 
   //- Below the fold
   Tweets
