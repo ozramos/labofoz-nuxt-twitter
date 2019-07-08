@@ -44,7 +44,12 @@ export default {
     '@nuxtjs/axios',
 
     // @See: https://github.com/rigor789/vue-scrollto
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+
+    // @see https://github.com/nuxt-community/analytics-module
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-143426826-1'
+    }]
   ],
   /*
    ** Axios module configuration
