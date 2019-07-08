@@ -21,7 +21,7 @@ export default {
 </script>
 
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @import '~assets/styl/variables'
 $logoSize = 240px
 
@@ -49,30 +49,52 @@ $logoSize = 240px
     overflow hidden
     margin-top 20px
     left (($contentWidth - $logoSize ) / 2)
-
+    
+  // SVG
   for i in (1..12)
     svg:nth-child({i})
-      transform translateZ(i * 20px)
-      animation float 3s ease infinite (i * -.25s)
-
+      transform translateZ(i * 10px - 40)
+      animation float 3s ease infinite (i * -.2s)
+  
+  svg:nth-child(1)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #272381
+  svg:nth-child(2)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #582e82
+  svg:nth-child(3)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #842a82
+  svg:nth-child(4)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #a82085
+  svg:nth-child(5)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #d60985
+  svg:nth-child(6)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #f41b2c
+  svg:nth-child(7)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #fc5319
+  svg:nth-child(8)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #f57c21
+  svg:nth-child(9)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #fca118
+  svg:nth-child(10)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #fca217
+  svg:nth-child(11)
+    .labofoz-logo-skin, .labofoz-logo-fur
+      fill #fec806
+  
 @keyframes float
   0%
-    top -50px
+    top -75px
   50%
-    top 50px
+    top 75px
   100%
-    top -50px
-
-@keyframes turn
-  0%
-    top 90px
-    transform rotateY(0deg)
-    width 0
-    height 0
-
-  100%
-    top 0
-    transform rotateY(1440deg)
-    width 240px
-    height 240px
+    top -75px
 </style>
