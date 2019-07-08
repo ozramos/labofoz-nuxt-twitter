@@ -1,16 +1,25 @@
 <template lang="pug">
 #hero-logo(
-  data-tilt 
-  data-tilt-max=50
-  data-tilt-full-page-listening='true'
-  data-tilt-reverse='true'
-  data-tilt-reset='false'
-  data-tilt-max-glare='1')
-
-  template(v-for='i in 6')
-    img(:src='"/favicon-head-flat-" + (7 - i) + ".png"')
-  img(src='/favicon-head.png')
+data-tilt
+data-title-gyroscope='false' 
+data-tilt-max=50
+data-tilt-full-page-listening='true'
+data-tilt-reverse='true'
+data-tilt-reset='false'
+data-tilt-max-glare='1')
+  template(v-for='i in 11')
+    TensorMonkey
+  TensorMonkey
 </template>
+
+<script>
+import TensorMonkey from './TensorMonkey'
+
+export default {
+  components: {TensorMonkey}
+}
+</script>
+
 
 <style lang="stylus" scoped>
 @import '~assets/styl/variables'
@@ -33,7 +42,7 @@ $logoSize = 240px
     position relative
     top 0
 
-  img
+  svg
     display inline-block
     position absolute
     top 0
@@ -41,13 +50,10 @@ $logoSize = 240px
     margin-top 20px
     left (($contentWidth - $logoSize ) / 2)
 
-  for i in (1..10)
-    img:nth-child({i})
+  for i in (1..12)
+    svg:nth-child({i})
       transform translateZ(i * 20px)
       animation float 3s ease infinite (i * -.25s)
-
-  img:last-child
-    animation float 3s ease infinite (7 * -.25s)
 
 @keyframes float
   0%

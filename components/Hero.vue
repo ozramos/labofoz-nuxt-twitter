@@ -6,7 +6,7 @@
         small
           small the
         |  Lab of Oz
-      p Hey 👋 I'm Oz Ramos and I'm interested in <br><strong>computer vision</strong>, <strong>handsfree interfaces</strong>, and <strong>robots</strong>!
+      p 👋 I'm Oz Ramos and I'm interested in <br><strong>computer vision</strong>, <strong>handsfree interfaces</strong>, and <strong>robots</strong>!
 
     ul
       li(v-for='link in links')

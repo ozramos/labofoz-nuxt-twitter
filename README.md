@@ -37,3 +37,6 @@ firebase init
 yarn build
 firebase deploy
 ```
+
+## Sources
+- [Original monkey favicon](https://www.designevo.com/apps/logo/?name=cute-monkey-and-interesting-gaming)
