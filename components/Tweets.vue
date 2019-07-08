@@ -6,16 +6,19 @@ div
   .container.wide
     div(v-masonry transition-duration='0.3s' item-selector='.tweet-wrap')
       Tweet.tweet-wrap(ref='tweet' v-masonry-tile v-for='tweetId in tweets[tweetTag]' :key='tweetId' :id='tweetId')
-        p Loading ...
+        .text-center
+          TensorMonkey(width=100)
+          p loading...
 </template>
 
 <script>
+import TensorMonkey from './TensorMonkey'
 import {Tweet} from 'vue-tweet-embed'
 import {mapState} from 'vuex'
 import VueScrollTo from 'vue-scrollto'
 
 export default {
-  components: {Tweet},
+  components: {Tweet, TensorMonkey},
 
   computed: mapState(['tweetTag']),
 
