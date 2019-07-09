@@ -13,7 +13,12 @@
     <g transform="translate(255, 130) scale(0.7, 0.7)">
       <polygon class="labofoz-logo-skin" points="50,0.951 65.144,31.63 99,36.551 74.5,60.431 80.282,94.152 50,78.232 19.717,94.152 25.5,60.431 1,36.551 34.858,31.63 "></polygon>
     </g>
-  </svg>  
+
+    <!-- New Mouth -->
+    <ellipse class="labofoz-logo-skin" cx=225 cy=250 rx=85 ry=35></ellipse>
+    <circle class="labofoz-logo-skin" cx=255 cy=280 r=30></circle>
+    <circle class="labofoz-logo-fur" cx=255 cy=280 r=15></circle>
+  </svg>
 </template>
 
 <style lang="stylus">
